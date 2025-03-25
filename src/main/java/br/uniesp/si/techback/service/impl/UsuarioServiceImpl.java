@@ -35,7 +35,6 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     public Usuario atualizar(Long id, Usuario usuario) {
         if (usuarioRepository.existsById(id)) {
-            usuario.setId(id);
             return usuarioRepository.save(usuario);
         }
         return null;
